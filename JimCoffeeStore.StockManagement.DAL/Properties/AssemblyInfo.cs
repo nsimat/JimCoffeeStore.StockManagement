@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("JimCoffeeStore.StockManagement.Model")]
+[assembly: AssemblyTitle("JimCoffeeStore.StockManagement.DAL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("JimCoffeeStore.StockManagement.Model")]
+[assembly: AssemblyProduct("JimCoffeeStore.StockManagement.DAL")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("ddef54e1-e983-41bf-9c66-b10b5876167f")]
+[assembly: Guid("4075a494-f6b8-4583-87c3-4e31d6526f3d")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //
