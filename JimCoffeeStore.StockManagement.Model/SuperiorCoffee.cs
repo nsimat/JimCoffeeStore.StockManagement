@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JimCoffeeStore.StockManagement.Model
 {
-    class SuperiorCoffee : Coffee
+    public class SuperiorCoffee : Coffee
     {
         public string ExtraDescription { get; set; }
     }
