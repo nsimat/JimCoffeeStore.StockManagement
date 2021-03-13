@@ -8,7 +8,7 @@ namespace JimCoffeeStore.StockManagement.Model
 {
     public class Coffee
     {
-        public int CoffeId { get; set; }
+        public int CoffeeId { get; set; }
         public string CoffeeName { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
