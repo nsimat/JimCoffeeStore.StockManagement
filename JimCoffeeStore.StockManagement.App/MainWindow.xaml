@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:JimCoffeeStore.StockManagement.App"
+        xmlns:views="clr-namespace:JimCoffeeStore.StockManagement.App.Views"
         mc:Ignorable="d"
         
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -13,7 +14,9 @@
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
         Title="MainWindow" Height="500" Width="800">
-    <Grid>
-        
+    <Grid x:Name="MainContent">
+        <ContentControl>
+            <views:CoffeeOverviewView/>
+        </ContentControl>
     </Grid>
 </Window>

@@ -77,6 +77,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Services\ICoffeeeDataService.cs" />
     <Compile Include="Views\CoffeeOverviewView.xaml.cs">
       <DependentUpon>CoffeeOverviewView.xaml</DependentUpon>
     </Compile>
@@ -123,6 +124,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JimCoffeeStore.StockManagement.DAL\JimCoffeeStore.StockManagement.DAL.csproj">
+      <Project>{4075a494-f6b8-4583-87c3-4e31d6526f3d}</Project>
+      <Name>JimCoffeeStore.StockManagement.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JimCoffeeStore.StockManagement.Model\JimCoffeeStore.StockManagement.Model.csproj">
+      <Project>{ddef54e1-e983-41bf-9c66-b10b5876167f}</Project>
+      <Name>JimCoffeeStore.StockManagement.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

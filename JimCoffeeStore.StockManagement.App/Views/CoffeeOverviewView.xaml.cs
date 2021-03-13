@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JimCoffeeStore.StockManagement.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,17 @@ namespace JimCoffeeStore.StockManagement.App.Views
     /// </summary>
     public partial class CoffeeOverviewView : UserControl
     {
+        private Coffee selectedCoffee;
+
         public CoffeeOverviewView()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            throw new NotImplementedException();
         }
     }
 }
