@@ -1,4 +1,6 @@
-﻿using JimCoffeeStore.StockManagement.Model;
+﻿using JimCoffeeStore.StockManagement.App.Services;
+using JimCoffeeStore.StockManagement.DAL;
+using JimCoffeeStore.StockManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +33,19 @@ namespace JimCoffeeStore.StockManagement.App.Views
 
         private void LoadData()
         {
-            throw new NotImplementedException();
+            CoffeeRepository coffeeRepository = new CoffeeRepository();
+            CoffeeDataService coffeeDataService = new CoffeeDataService(coffeeRepository);
+            CoffeeListView.ItemsSource = coffeeDataService.GetAllCoffees();
+        }
+
+        private void CoffeeListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void EditCoffeeButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
