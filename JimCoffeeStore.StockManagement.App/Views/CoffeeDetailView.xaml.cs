@@ -50,7 +50,9 @@ namespace JimCoffeeStore.StockManagement.App.Views
 
             BitmapImage img = new BitmapImage();
             img.BeginInit();
-            img.UriSource = new Uri("");
+            img.UriSource = new Uri("/JimCoffeeStore.StockManagement.App;component/Images/coffee" + SelectedCoffee.CoffeeId + ".jpg", UriKind.Relative);
+            img.EndInit();
+            CoffeeImage.Source = img;
         }
 
         private void SaveCoffeeButton_Click(object sender, RoutedEventArgs e)
