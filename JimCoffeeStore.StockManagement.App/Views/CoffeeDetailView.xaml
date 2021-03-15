@@ -63,7 +63,7 @@
 
             <TextBox Grid.Row="2" Grid.Column="1" 
                      Name="CoffeeIdTextBox"
-                     Text="{Binding CoffeeId}"></TextBox>
+                     Text="{Binding CoffeeId, Mode=OneWay}"></TextBox>
             <TextBox Grid.Row="3" Grid.Column="1" 
                      Text="{Binding Description}"
                      Name="CoffeeDescriptionTextBox" 
@@ -84,8 +84,8 @@
             <StackPanel Grid.Row="9" 
                         Orientation="Horizontal" 
                         Grid.ColumnSpan="2">
+                <Button Name="ChangeCoffeeButton" Click="ChangeCoffeeButton_Click" Margin="5" Content="Change coffee"></Button>
                 <Button Name="SaveCoffeeButton" Click="SaveCoffeeButton_Click" Margin="5" Content="Save coffee"></Button>
-                <Button Name="DeleteCoffeeButton" Click="DeleteCoffeeButton_Click" Margin="5" Content="Delete coffeee"></Button>
             </StackPanel>
 
         </Grid>

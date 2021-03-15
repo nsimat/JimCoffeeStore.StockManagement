@@ -70,5 +70,11 @@ namespace JimCoffeeStore.StockManagement.App.Views
             CoffeeOverviewView coffeeOverviewView = new CoffeeOverviewView();
             window.Content = coffeeOverviewView;
         }
+
+        private void ChangeCoffeeButton_Click(object sender, RoutedEventArgs e)
+        {            
+            SelectedCoffee.CoffeeName = "Something really expensive.";
+            SelectedCoffee.Price = 1000;
+        }
     }
 }

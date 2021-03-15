@@ -24,7 +24,7 @@
                   SelectionChanged="CoffeeListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="#CCCCCC" BorderThickness="1">
+                    <Border BorderBrush="#CCCCCC" BorderThickness="2">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"></ColumnDefinition>
@@ -36,7 +36,7 @@
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="15"></RowDefinition>
                             </Grid.RowDefinitions>                            
-                            <Image Source="{Binding ImageId}" Grid.Row="0"
+                            <Image Source="{Binding ImageId}"
                                    Grid.RowSpan="2"
                                    VerticalAlignment="Center"/>
                             <Label Content="{Binding CoffeeName}"
@@ -84,21 +84,24 @@
 
             <Label Grid.Row="1" Grid.Column="1" 
                    Name="CoffeeIdLabel"></Label>
-            <Label Grid.Row="2" Grid.Column="2" 
+            <Label Grid.Row="2" Grid.Column="1" 
                    Name="CoffeeNameLabel"></Label>
-            <Label Grid.Row="3" Grid.Column="3" 
+            <Label Grid.Row="3" Grid.Column="1" 
                    Name="DescriptionLabel"></Label>
-            <Label Grid.Row="4" Grid.Column="4" 
+            <Label Grid.Row="4" Grid.Column="1" 
                    Name="PriceLabel"></Label>
-            <Label Grid.Row="5" Grid.Column="5" 
+            <Label Grid.Row="5" Grid.Column="1" 
                    Name="StockAmountLabel"></Label>
-            <Label Grid.Row="6" Grid.Column="6" 
+            <Label Grid.Row="6" Grid.Column="1" 
                    Name="FirstTimeAddedLabel"></Label>
 
-            <StackPanel Grid.Row="7">
+            <StackPanel Grid.Row="7" Orientation="Horizontal">
                 <Button Name="EditCoffeeButton"
                         Click="EditCoffeeButton_Click"
                         Content="Edit coffee"></Button>
+                <Button x:Name="AddFakeCoffeeButton" Grid.Column="1"
+                        Click="AddFakeCoffeeButton_Click"                        
+                        Content="Add extra coffee" Margin="0,0,0,-0.8"/>
             </StackPanel>
         </Grid>
     </Grid>

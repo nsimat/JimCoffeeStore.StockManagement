@@ -1,8 +1,10 @@
-﻿using JimCoffeeStore.StockManagement.App.Services;
+﻿using JimCoffeeStore.StockManagement.App.Extensions;
+using JimCoffeeStore.StockManagement.App.Services;
 using JimCoffeeStore.StockManagement.DAL;
 using JimCoffeeStore.StockManagement.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +26,7 @@ namespace JimCoffeeStore.StockManagement.App.Views
     public partial class CoffeeOverviewView : UserControl
     {
         private Coffee selectedCoffee;
-        private List<Coffee> coffees;
+        private ObservableCollection<Coffee> coffees;
 
         public CoffeeOverviewView()
         {
@@ -36,7 +38,7 @@ namespace JimCoffeeStore.StockManagement.App.Views
         {
             CoffeeRepository coffeeRepository = new CoffeeRepository();
             CoffeeDataService coffeeDataService = new CoffeeDataService(coffeeRepository);
-            coffees = coffeeDataService.GetAllCoffees();
+            coffees = coffeeDataService.GetAllCoffees().ToObservableCollection();
             CoffeeListView.ItemsSource = coffees;
         }
 
@@ -67,8 +69,24 @@ namespace JimCoffeeStore.StockManagement.App.Views
             coffeeDetailView.SelectedCoffee = selectedCoffee;
 
             var window = Window.GetWindow(this);
-            window.Content = coffeeDetailView;
-            //window.ShowDialog();
+            window.Content = coffeeDetailView;            
+        }
+
+        private void AddFakeCoffeeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Coffee coffee = new Coffee()
+            {
+                CoffeeId = 123,
+                CoffeeName = "Test coffee",
+                Description = "Simply the best coffee",
+                ImageId = 1,
+                AmountInStock = 1000,
+                InStock = true,
+                FirstAddedToStockDate = new DateTime(2014, 1, 3),
+                OriginCountry = Country.Brasil,
+                Price = 15
+            };
+            coffees.Add(coffee);
         }
     }
 }
