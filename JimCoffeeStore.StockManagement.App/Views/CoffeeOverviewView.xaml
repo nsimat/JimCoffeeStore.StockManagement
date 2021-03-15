@@ -47,7 +47,7 @@
                                 <Label Content="Stock: "></Label>
                                 <Label Content="{Binding AmountInStock}"></Label>
                             </StackPanel>
-                            <Label Content="{Binding Price}" 
+                            <Label Content="{Binding Price, Converter={StaticResource localPriceConverter}}" 
                                    HorizontalAlignment="Right"
                                    Grid.Row="1" Grid.Column="2"></Label>
                         </Grid>

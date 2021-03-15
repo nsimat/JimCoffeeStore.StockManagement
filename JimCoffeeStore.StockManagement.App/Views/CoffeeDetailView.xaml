@@ -69,7 +69,7 @@
                      Name="CoffeeDescriptionTextBox" 
                      AcceptsReturn="True" Height="75"></TextBox>
             <TextBox Grid.Row="4" Grid.Column="1" 
-                     Text="{Binding Price}"
+                     Text="{Binding Price, Converter={StaticResource localPriceConverter}}"
                      Name="CoffeePriceTextBox"></TextBox>
             <TextBox Grid.Row="5" Grid.Column="1" 
                      Text="{Binding AmountInStock}"
