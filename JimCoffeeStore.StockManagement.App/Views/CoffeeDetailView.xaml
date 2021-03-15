@@ -7,7 +7,13 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              Loaded="CoffeeDetailView_Loaded"
-             d:DesignHeight="450" d:DesignWidth="800">
+             
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}"
+             TextElement.FontWeight="Medium"
+             TextElement.FontSize="14"
+             FontFamily="{materialDesign:MaterialDesignFont}"
+             d:DesignHeight="450" d:DesignWidth="800" Margin="5">
     <ScrollViewer>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -29,6 +35,7 @@
             </Grid.RowDefinitions>
             <Label Grid.Row="0" 
                    Name="CoffeeNameLabel"
+                   Content="{Binding CoffeeName}"
                    Grid.ColumnSpan="2"
                    FontSize="40"
                    FontWeight="Bold"></Label>
@@ -44,28 +51,34 @@
                    Content="Description" 
                    FontWeight="Bold" 
                    VerticalAlignment="Center"></Label>
-            <Label Grid.Row="3" 
+            <Label Grid.Row="4" 
                    Content="Price" 
                    FontWeight="Bold"></Label>
-            <Label Grid.Row="4" 
+            <Label Grid.Row="5" 
                    Content="Stock amount" 
                    FontWeight="Bold"></Label>
-            <Label Grid.Row="5" 
+            <Label Grid.Row="6" 
                    Content="First Time added" 
                    FontWeight="Bold"></Label>
 
             <TextBox Grid.Row="2" Grid.Column="1" 
-                     Name="CoffeeIdTextBox"></TextBox>
+                     Name="CoffeeIdTextBox"
+                     Text="{Binding CoffeeId}"></TextBox>
             <TextBox Grid.Row="3" Grid.Column="1" 
+                     Text="{Binding Description}"
                      Name="CoffeeDescriptionTextBox" 
                      AcceptsReturn="True" Height="75"></TextBox>
             <TextBox Grid.Row="4" Grid.Column="1" 
+                     Text="{Binding Price}"
                      Name="CoffeePriceTextBox"></TextBox>
             <TextBox Grid.Row="5" Grid.Column="1" 
+                     Text="{Binding AmountInStock}"
                      Name="StockAmountTextBox"></TextBox>
             <TextBox Grid.Row="6" Grid.Column="1" 
+                     Text="{Binding FirstAddedToStockDate}"
                      Name="FirstTimeAddedTextBox"></TextBox>
             <TextBox Grid.Row="7" Grid.Column="1" 
+                     Text="{Binding ExtraDescription}"
                      Name="ExtraDescriptionTextBox"></TextBox>
 
             <StackPanel Grid.Row="9" 
