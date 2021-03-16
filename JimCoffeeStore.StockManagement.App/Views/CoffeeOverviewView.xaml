@@ -36,7 +36,7 @@
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="15"></RowDefinition>
                             </Grid.RowDefinitions>                            
-                            <Image Source="{Binding ImageId}"
+                            <Image Source="{Binding ImageId, Converter={StaticResource localImageConverter}}"
                                    Grid.RowSpan="2"
                                    VerticalAlignment="Center"/>
                             <Label Content="{Binding CoffeeName}"

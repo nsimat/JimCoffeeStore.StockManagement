@@ -40,7 +40,8 @@
                    FontSize="40"
                    FontWeight="Bold"></Label>
 
-            <Image Name="CoffeeImage" Grid.Row="1"
+            <Image Source="{Binding ImageId, Converter={StaticResource localImageConverter}}" 
+                   Name="CoffeeImage" Grid.Row="1"
                    Grid.ColumnSpan="2"
                    MaxHeight="150"
                    MaxWidth="150"></Image>
