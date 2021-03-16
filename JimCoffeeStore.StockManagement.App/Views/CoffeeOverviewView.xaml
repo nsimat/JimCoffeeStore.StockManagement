@@ -39,7 +39,7 @@
                             <Image Source="{Binding ImageId, Converter={StaticResource localImageConverter}}"
                                    Grid.RowSpan="2"
                                    VerticalAlignment="Center"/>
-                            <Label Content="{Binding CoffeeName}"
+                            <Label Content="{Binding CoffeeName, Converter={StaticResource localDoNothingConverter}}"
                                    FontSize="14" Grid.Column="1"
                                    Grid.ColumnSpan="2" FontWeight="Bold"></Label>
                             <StackPanel Grid.Row="1" Orientation="Horizontal"

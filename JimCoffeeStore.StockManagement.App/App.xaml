@@ -10,6 +10,7 @@
             <converter:PriceConverter x:Key="localPriceConverter"></converter:PriceConverter>
             <converter:ImageConverter x:Key="localImageConverter"></converter:ImageConverter>
             <converter:AmountInStockConverter x:Key="localAmountInStockConverter"></converter:AmountInStockConverter>
+            <converter:DoNothingConverter x:Key="localDoNothingConverter"></converter:DoNothingConverter>
             <ResourceDictionary.MergedDictionaries>
                 <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
