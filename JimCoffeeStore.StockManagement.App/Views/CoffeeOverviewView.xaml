@@ -95,13 +95,13 @@
             <Label Grid.Row="6" Grid.Column="1" 
                    Name="FirstTimeAddedLabel"></Label>
 
-            <StackPanel Grid.Row="7" Orientation="Horizontal">
-                <Button Name="EditCoffeeButton"
+            <StackPanel Grid.Row="7" Orientation="Horizontal" Grid.ColumnSpan="2">
+                <Button Name="EditCoffeeButton" Margin="0,0,70,0"
                         Click="EditCoffeeButton_Click"
                         Content="Edit coffee"></Button>
                 <Button x:Name="AddFakeCoffeeButton" Grid.Column="1"
                         Click="AddFakeCoffeeButton_Click"                        
-                        Content="Add extra coffee" Margin="0,0,0,-0.8"/>
+                        Content="Add extra coffee" Margin="0,0,0,0"/>
             </StackPanel>
         </Grid>
     </Grid>
